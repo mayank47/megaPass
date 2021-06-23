@@ -1,2 +1,2 @@
 print("db manager")
-print("Enter databse password")
+print("Enter databse name")
