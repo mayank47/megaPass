@@ -11,13 +11,16 @@ else:
     
 choice = menu() 
 
-while choice != "Q":
+while choice.upper() != "Q":
     if choice == "1":
         create()
+        choice = menu() 
     elif choice == "2":
         findAccount()
+        choice = menu()
     elif choice == "3":
         find()
+        choice = menu()
     else :
         choice = menu()
         
