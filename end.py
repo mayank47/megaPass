@@ -1,7 +1,5 @@
 from cryptography.fernet import Fernet
 
-
-
 def encPassword(passw):
     key = Fernet.generate_key()
     fernet = Fernet(key)
