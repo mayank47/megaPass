@@ -35,10 +35,10 @@ def create():
     insertPassword(appName,encPass,key,userEmail,userName,url)
     
 
-def findAccount():
+def findAccount(): #sql select userEmail,appName,userName,url from accounts where userEmail = "xyz";
     print("Please provide the email that you want to find account for:  ")
     userEmail = input()
-    #sql select userEmail,appName,userName,url from accounts where userEmail = "xyz";
+   
 
 
 def find():
