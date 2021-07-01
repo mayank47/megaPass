@@ -1,20 +1,22 @@
-from menu import menu,create,findAccount
+from menu import menu,create,findAccount,find
+from getpass import getpass
+
 secret = "password"
-passw = input('Please Provide Password: ')
+passw = getpass('Please Provide Password: ')
 
 if passw == secret:
     print("You're in")
-
-else: 
-    print("Incorrect Pasword")
+    
+else:
+    print("Incorrect Password")
     
     
-choice = menu() 
+choice = menu()
 
 while choice.upper() != "Q":
     if choice == "1":
         create()
-        choice = menu() 
+        choice = menu()
     elif choice == "2":
         findAccount()
         choice = menu()
@@ -23,4 +25,3 @@ while choice.upper() != "Q":
         choice = menu()
     else :
         choice = menu()
-        
