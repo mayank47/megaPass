@@ -32,7 +32,6 @@ def create():
     if userName == None:
         userName = ""
     url = input("Please paste the url to the site that you are creating the password for: ")
-    #function to insert data (appName,encPass,key,userEmail,url) in accounts table
     insertPassword(appName,encPass,key,userEmail,userName,url)
     
 
