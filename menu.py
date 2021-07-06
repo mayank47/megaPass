@@ -1,7 +1,7 @@
 from getpass import getpass
 import clipboard
 from end import encPassword,decryptPassword
-from db_manager import insertPassword,findPassword
+from db_manager import insertPassword,fetchDetails,findPassword
 
 def menu():
     print("-"*30)
@@ -38,6 +38,8 @@ def create():
 def findAccount(): #sql select userEmail,appName,userName,url from accounts where userEmail = "xyz";
     print("Please provide the email that you want to find account for:  ")
     userEmail = input()
+    fetchDetails(userEmail)
+    
    
 
 
