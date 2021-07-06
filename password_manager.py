@@ -6,22 +6,18 @@ passw = getpass('Please Provide Password: ')
 
 if passw == secret:
     print("You're in")
-    
+    choice = menu()
+    while choice.upper() != "Q":
+        if choice == "1":
+            create()
+            choice = menu()
+        elif choice == "2":
+            findAccount()
+            choice = menu()
+        elif choice == "3":
+            find()
+            choice = menu()
+        else :
+            choice = menu()    
 else:
     print("Incorrect Password")
-    
-    
-choice = menu()
-
-while choice.upper() != "Q":
-    if choice == "1":
-        create()
-        choice = menu()
-    elif choice == "2":
-        findAccount()
-        choice = menu()
-    elif choice == "3":
-        find()
-        choice = menu()
-    else :
-        choice = menu()
