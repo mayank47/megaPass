@@ -24,7 +24,7 @@
 - Fork this repo, and cd into it. 
 ```bash
 git clone https://github.com/mayank47/megaPass.git
-cd megaPass\
+cd megaPass/
 ```
 
 - Install requisite python packages and modules.
