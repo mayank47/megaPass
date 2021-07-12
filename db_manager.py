@@ -22,10 +22,15 @@ def fetchDetails(userEmail):
         selectQuery = "SElECT appName,userName,url from accounts WHERE userEmail = '{}'".format(userEmail)
         cursor.execute(selectQuery)
         data = cursor.fetchall()
-        print("USER EMAIL: ",userEmail)
+        print()
+        print("*"*90)
+        print("EMAIL:",userEmail)
+        print("-"*90)
         for row in data:
             print(("APPNAME: "+row[0],"USERNAME: "+row[1],"URL: "+row[2]))
-        print("-"*30)
+            print("-"*90)    
+        print("*"*90)
+        print()
         db.close()
         
     except:

@@ -48,11 +48,12 @@ def find():
     appName = input()
     encPass,key = findPassword(appName)
     clipboard.copy(decryptPassword(encPass,key))
-    print("-"*30)
+    print("")
+    print("-"*41)
     print("")
     print("Your password is copied to your clipboard")
     print("")
-    print("-" *30)
+    print("-" *41)
     print("")
     
     
