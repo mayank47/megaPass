@@ -4,13 +4,13 @@ from end import encPassword,decryptPassword
 from db_manager import insertPassword,fetchDetails,findPassword
 
 def menu():
-    print("-"*30)
-    print(("-"*13) +"Menu"+ ("-" *13))
+    print("-"*34)
+    print(("-"*15) +"Menu"+ ("-" *15))
     print("1. Create new password")
     print("2. Find apps connected to an email")
     print("3. Find a password for an app")
     print("Q. Exit")
-    print("-"*30)
+    print("-"*34)
     return input(": ")
 
 
