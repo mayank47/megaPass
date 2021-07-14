@@ -9,10 +9,10 @@ def insertPassword(appName,encPass,key,userEmail,userName,url):
         insertQuery = "INSERT INTO accounts(appName,encPass,dkey,userEmail,userName,url) VALUES('{}','{}','{}','{}','{}','{}')".format(appName,encPass,key,userEmail,userName,url)
         cursor.execute(insertQuery)
         db.commit()
-        print("Added")
+        print("Information added successfully")
         
     except:
-        print("Error")
+        print("Unable to connect database")
 
 def fetchDetails(userEmail):
     try:
@@ -34,7 +34,7 @@ def fetchDetails(userEmail):
         db.close()
         
     except:
-        print("Error")
+        print("Incorrect Information!")
 
 def findPassword(appName):
     try:
@@ -43,9 +43,9 @@ def findPassword(appName):
         cursor = db.cursor()
         selectQuery = "SELECT encPass,dkey from accounts WHERE appName = '{}'".format(appName)
         cursor.execute(selectQuery)
-        data = cursor.fetchall() #((encpass,key,))
+        data = cursor.fetchall()
         return data[0][0].encode(),data[0][1].encode()
         db.close()
         
     except:
-        print("Error")
+        print("Incorrect Information!")
